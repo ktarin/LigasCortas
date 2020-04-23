@@ -26,6 +26,50 @@ app.get('/users/:id', function(req, res) {
   })
 })
 
+app.get("/pdf",(req,res) =>{
+  console.log('test');
+  let name = req.body.name;
+  let body = req.body.body;
+
+  
+  var fonts = {
+    
+    Courier: {
+      normal: 'Courier',
+      bold: 'Courier-Bold',
+      italics: 'Courier-Oblique',
+      bolditalics: 'Courier-BoldOblique'
+    }
+    
+  };
+  
+
+  var PdfPrinter = require('pdfmake');
+  var printer = new PdfPrinter(fonts);
+  var fs = require('fs');
+  
+  var docDefinition = {
+    content: [
+      name,
+      body
+    ],
+    defaultStyle: {
+      font: 'Courier'
+    }
+  };
+  
+  var options = {
+    // ...
+  }
+  
+  var pdfDoc = printer.createPdfKitDocument(docDefinition, options);
+  res.contentType("application/pdf");
+  pdfDoc.pipe(res)
+  pdfDoc.end();
+
+
+});
+
 app.post('/users', function(req, res) {
   const user = new User(req.body)
   user.save().then(function() {

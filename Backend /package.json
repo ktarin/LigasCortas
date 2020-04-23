@@ -12,6 +12,7 @@
   "dependencies": {
     "express": "^4.17.1",
     "mongoose": "^5.7.8",
+    "pdfmake": "^0.1.65",
     "validator": "^12.0.0"
   }
 }
