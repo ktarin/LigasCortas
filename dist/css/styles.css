@@ -29,6 +29,7 @@
   --success: #28a745;
   --info: #17a2b8;
   --warning: #ffc107;
+  --weekly: rgb(255,167,38);
   --danger: #dc3545;
   --light: #f8f9fa;
   --dark: #343a40;
@@ -10214,4 +10215,34 @@ body {
 }
 .sb-sidenav-light .sb-sidenav-footer {
   background-color: #e9ecef;
+}
+
+.weeklyColor{
+  background-color: rgb(255,167,38);
+  color: white;
+}
+
+.dairyColor{
+  background-color: rgb(171,71,188);
+  color: white;
+}
+
+.colorLigas{
+  background-color: rgb(239,83,80);
+  color: white;
+}
+
+.colorLandings{
+  background-color:rgb(66,165,245);
+  color: white;
+}
+
+.colorStats{
+  background-color: rgb(105,240,174);
+  color: white;
+}
+
+.colorProf{
+  background-color: rgb(141,110,99);
+  color: white;
 }
