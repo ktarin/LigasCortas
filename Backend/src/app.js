@@ -64,7 +64,7 @@ app.get("/pdf",(req,res) =>{
   
   var pdfDoc = printer.createPdfKitDocument(docDefinition, options);
   res.contentType("application/pdf");
-  pdfDoc.pipe(res)
+  pdfDoc.pipe(res);
   pdfDoc.end();
 
 
