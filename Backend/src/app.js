@@ -1,5 +1,7 @@
 const express = require('express')
 const app = express()
+const path = require('path');
+const useragent = require('express-useragent');
 
 require('./db/db.js')
 
@@ -115,6 +117,31 @@ app.delete('/users/:id', function(req, res) {
   })
 })
 
+let landing = {
+  titulo: "Titulo de landing",
+  body : "<h1>Esto es injection!!</h1>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce eget enim eu nulla maximus dapibus et vel lacus. Cras et nulla dignissim, finibus purus eget, ullamcorper est. Donec cursus sapien at nunc efficitur sagittis. Sed congue venenatis urna eu lacinia. Sed tincidunt leo ut efficitur vestibulum. Donec sed purus porta, dictum mauris eu, condimentum nisl. Aenean sed sem turpis. Nunc eu orci in risus accumsan elementum. Praesent molestie fringilla orci, eu dictum odio molestie mattis. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Integer id varius est. Mauris eget nisl urna.",
+  footer : "Gracias por usar el creador de landing"
+};
+
+app.set('views', path.join(__dirname,'landings' ));
+
+app.set('view engine', '.hbs');
+app.use(useragent.express());
+
+app.get('/template1', (req, res) =>{
+  console.log(req.useragent.browser);
+  console.log(req.ip);
+  console.log("Una visita a landing");
+  res.render(
+    'template1',
+    {titulo : landing.titulo, body : landing.body, footer : landing.footer})
+});
+
+app.get('/template2', (req, res) =>{
+  res.render(
+    'template2',
+    {titulo : landing.titulo, body : landing.body, footer : landing.footer})
+});
 
 app.listen(port, function() {
   console.log('Server up and running on port', port)
