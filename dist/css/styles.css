@@ -10218,22 +10218,22 @@ body {
 }
 
 .weeklyColor{
-  background-color: rgb(255,167,38);
+  background-color: rgb(255,183,77);
   color: white;
 }
 
 .dairyColor{
-  background-color: rgb(171,71,188);
+  background-color: rgb(186,104,200);
   color: white;
 }
 
 .colorLigas{
-  background-color: rgb(239,83,80);
+  background-color: rgb(229,115,115);
   color: white;
 }
 
 .colorLandings{
-  background-color:rgb(66,165,245);
+  background-color:rgb(100,181,246);
   color: white;
 }
 
@@ -10243,7 +10243,7 @@ body {
 }
 
 .colorProf{
-  background-color: rgb(141,110,99);
+  background-color: rgb(161,136,127);
   color: white;
 }
 
@@ -10257,3 +10257,7 @@ body {
   background-size: 4em 4em;
   background-color: #232323;
   }
+
+input{
+  text-align: center;
+}
