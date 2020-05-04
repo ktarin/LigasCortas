@@ -1,5 +1,6 @@
 const express = require('express')
 const app = express()
+const Handlebar = require("handlebars");
 
 require('./db/db.js')
 
@@ -8,6 +9,17 @@ const User = require('./models/user.js')
 const port = process.env.PORT || 3000
 
 app.use(express.json())
+
+app.set('view engine','hbs');
+
+
+app.get('/template1/',(req,res) =>{
+  if(!req.query.exists){
+    res.render('template1');
+  }else{
+    res.render('index',{titulo: req.query.titulo,imgSrc: req.query.imgUrl,footer: req.query.footer})
+  }
+});
 
 app.get('/users', function(req, res) {
   User.find({}).then(function(users) {
