@@ -2,17 +2,16 @@ const express = require ('express')
 const router = express.Router()
 
 const users = require('./controllers/users.js')
-const todos = require('./controllers/todos.js')
 const auth = require('./middleware/auth')
 
 
 //Rutas para acceder a API 
-router.get('/users', auth, users.getUser)
-router.post('/login', users.login)
-router.post('/logout', auth, users.logout)
+//router.get('/users', auth, users.getUser) //Show all 
+router.post('/login', users.login) //Login
+router.post('/logout', auth, users.logout) //Close token
 router.post('/users', users.createUser)  // signup
-router.patch('/users', auth, users.updateUser)
-router.delete('/users', auth, users.deleteUser)
+router.patch('/users', auth, users.updateUser) //update user
+router.delete('/users', auth, users.deleteUser) //Delete user 
 
 /*
 router.get('/todos/:id', auth, todos.getTodo)
