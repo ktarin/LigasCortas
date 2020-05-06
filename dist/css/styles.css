@@ -10247,6 +10247,10 @@ body {
   color: white;
 }
 
+.colorComp{
+  background-color: rgb(144, 109, 158);
+  color: white;
+}
 
 .back_login {
   background: 

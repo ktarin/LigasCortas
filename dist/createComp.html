@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
     <meta name="description" content="" />
     <meta name="author" content="" />
-    <title>Consulta Landing - SB Admin</title>
+    <title>Creacion Empresa - SB Admin</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootswatch/4.4.1/lux/bootstrap.min.css">
     <link href="css/styles.css" rel="stylesheet" />
     <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/js/all.min.js"
@@ -122,25 +122,76 @@
             </nav>
         </div>
 
-
         <div id="layoutSidenav_content">
             <main>
                 <div class="container-fluid">
-                    <h1 class="mt-4">Consultar landing page</h1>
+                    <h1 class="mt-4">Crear empresa cliente</h1>
                     <ol class="breadcrumb mb-4">
                         <li class="breadcrumb-item"><a href="index.html">Dashboard</a></li>
-                        <li class="breadcrumb-item active">Landing pages</li>
-                        <li class="breadcrumb-item active">Consultas</li>
+                        <li class="breadcrumb-item active">Empresa</li>
+                        <li class="breadcrumb-item active">Creacion</li>
                     </ol>
                     <div class="card mb-4">
                         <div class="card-body">
-                            Consulta en las landing page de la empresa
+                            Creacion de empresa cliente
                         </div>
                     </div>
                     <div class="card mb-4">
-                        <div class="card-header colorLandings"><i class="fas fa-plane-arrival"></i> Landing pages</div>
+                        <div class="card-header colorComp"><i class="fas fa-building"></i> Perfil de empresa</div>
                         <div class="card-body">
-
+                            <form>
+                                <div class="form-group">
+                                    <center>
+                                    <label class="font-weight-bold mb-1" for="inputName">
+                                        Nombre
+                                    </label>
+                                    </center>
+                                    <input class="form-control py-4" id="inputName"
+                                        type="text" placeholder="Introduzca el nombre del perfil" />
+                                </div>
+                                <div class="form-group">
+                                    <center>
+                                    <label class="font-weight-bold mb-1" for="inputRazon">
+                                        Razon social
+                                    </label>
+                                    </center>
+                                    <input class="form-control py-4" id="inputRazon"
+                                        type="text" placeholder="Introduzca la razon social de la empresa" />
+                                </div>                            
+                                <div class="form-group">
+                                    <center>
+                                    <label class="font-weight-bold mb-1" for="inputDomicilio">
+                                        Domicilio
+                                    </label>
+                                    </center>
+                                    <input class="form-control py-4" id="inputDomicilio"
+                                        type="text" placeholder="Introduzca el domicilio de la empresa" />
+                                </div>
+                                <div class="form-group">
+                                    <center>
+                                    <label class="font-weight-bold mb-1" for="inputCont">
+                                        Numero de contacto
+                                    </label>
+                                    </center>
+                                    <input class="form-control py-4" id="inputCont"
+                                        type="text" placeholder="Introduzca el telefono de contacto de la empresa" />
+                                </div>
+                                <div class="form-group">
+                                    <center>
+                                    <label class="font-weight-bold mb-1" for="inputPais">
+                                        País
+                                    </label>
+                                    </center>
+                                    <input class="form-control py-4" id="inputPais"
+                                        type="text" placeholder="Introduzca el país donde se encuentran" />
+                                </div>
+                                
+                                <div class="form-group d-flex align-items-center justify-content-between mt-4 mb-0">
+                                    <a class="btn btn-primary text-white">
+                                        Crear
+                                    </a>
+                                </div>
+                            </form>
                         </div>
                     </div>
                 </div>
